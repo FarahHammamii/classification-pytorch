@@ -7,9 +7,14 @@ venv/
 
 data/
 models/
+src/__pycache__/
 
 __pycache__/
 *.pyc
 *.log
 /data
 /models
+
+*.json
+/mlartifacts
+mlruns/
