@@ -93,7 +93,7 @@ A service account was created to enable programmatic access to Google Drive with
 
 Enabled Google Drive API to allow DVC interaction with Google Drive storage.
 
-![Google Drive API Activation](classification-pytorch/screenshots/google-drive-api.png)
+![Google Drive API Activation](./screenshots/google-drive-api.png)
 *Figure 2: Google Drive API enabled in the project*
 
 ---
@@ -107,7 +107,7 @@ Enabled Google Drive API to allow DVC interaction with Google Drive storage.
 - **Sharing:** Service account granted Editor permissions
 - **Folder ID:** `1URKIkoMxjbmwTctt2x_hmgMaJjpEXL9o`
 
-![Google Drive Shared Folder](classification-pytorch/screenshots/google-drive-folder.png)
+![Google Drive Shared Folder](./screenshots/google-drive-folder.png)
 *Figure 3: Shared folder configuration in Google Drive*
 
 **Access Verification:**
@@ -148,7 +148,7 @@ dvc init
 dvc add data
 ```
 
-![DVC Data Addition](/classification-pytorch/screenshots/dvc-add-data.png)
+![DVC Data Addition](./screenshots/dvc-add-data.png)
 *Figure 4: Adding data to DVC tracking*
 
 **What Happened:**
@@ -207,7 +207,7 @@ git add .dvc/config .dvc/.gitignore data.dvc models.dvc
 git commit -m "Configure DVC with Google Drive remote"
 git push origin main
 ```
-![Output on Drive](/classification-pytorch/screenshots/pushed.png)
+![Output on Drive](./screenshots/pushed.png)
 *Figure 5: Repository secrets configuration for CI/CD*
 ---
 
@@ -222,7 +222,7 @@ To enable GitHub Actions to access Google Drive during automated workflows, cred
 2. Created new repository secret: `GDRIVE_CREDENTIALS_DATA`
 3. Pasted complete JSON content from service account credentials file
 
-![GitHub Secrets Configuration](/classification-pytorch/screenshots/secret.png)
+![GitHub Secrets Configuration](./screenshots/secret.png)
 *Figure 6: Repository secrets configuration for CI/CD*
 
 ---
@@ -269,9 +269,9 @@ python main.py --mode train --data_path data/train --use_mlflow
 - **Artifacts:** Model checkpoints, loss curves, training history
 - **Models:** Versioned PyTorch models with metadata
 
-![MLflow Training Runs](/classification-pytorch/screenshots/mlflow-runs.png)
+![MLflow Training Runs](./screenshots/mlflow-runs.png)
 *Figure 7: MLflow UI showing multiple training runs with batch size parallel coordinates visualization*
-![MLflow Training Runs2](classification-pytorch/screenshots/value%20loss.png)
+![MLflow Training Runs2](./screenshots/value%20loss.png)
 *Figure 8: comparative diagram showing different value loss across validation runs*
 
 
@@ -292,7 +292,7 @@ python main.py --mode test \
 - **F1 Score:** 0.972
 - **Test Loss:** 0.038
 
-![MLflow Test Metrics](classification-pytorch/screenshots/mlflow-test-metrics.png)
+![MLflow Test Metrics](./screenshots/mlflow-test-metrics.png)
 *Figure 9: Detailed test metrics from MLflow experiment*
 
 ### 7.5 Experiment Comparison
@@ -304,8 +304,6 @@ MLflow's UI enables comparison of multiple runs to identify optimal hyperparamet
 - Validation loss across different configurations
 - Best performing model identification
 
-![MLflow Comparison](./screenshots/mlflow-comparison.png)
-*Figure 9: Comparative analysis of validation loss across experiments*
 
 **Key Findings:**
 - Best validation loss: 0.57 (fold_2)
