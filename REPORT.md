@@ -224,6 +224,13 @@ To enable GitHub Actions to access Google Drive during automated workflows, cred
 
 ![GitHub Secrets Configuration](./screenshots/secret.png)
 *Figure 6: Repository secrets configuration for CI/CD*
+**Workflow Trigger:**
+- Push to main branch
+- Pull request creation
+- Manual workflow dispatch
+
+![GitHub worfklow successful](./screenshots/github_actions_successful.png)
+*Figure 7: Successful  CI workflow*
 
 ---
 
@@ -270,9 +277,9 @@ python main.py --mode train --data_path data/train --use_mlflow
 - **Models:** Versioned PyTorch models with metadata
 
 ![MLflow Training Runs](./screenshots/mlflow-runs.png)
-*Figure 7: MLflow UI showing multiple training runs with batch size parallel coordinates visualization*
+*Figure 8: MLflow UI showing multiple training runs with batch size parallel coordinates visualization*
 ![MLflow Training Runs2](./screenshots/value%20loss.png)
-*Figure 8: comparative diagram showing different value loss across validation runs*
+*Figure 9: comparative diagram showing different value loss across validation runs*
 
 
 ### 7.4 Testing with MLflow
@@ -293,7 +300,7 @@ python main.py --mode test \
 - **Test Loss:** 0.038
 
 ![MLflow Test Metrics](./screenshots/mlflow-test-metrics.png)
-*Figure 9: Detailed test metrics from MLflow experiment*
+*Figure 10: Detailed test metrics from MLflow experiment*
 
 ### 7.5 Experiment Comparison
 
